@@ -41,3 +41,5 @@ print("Analiz sonuçları başarıyla Excel formatında kaydedildi.")
 insert_data_to_mssql(df_analysis, "Prediction")
 
 print("Analiz sonuçları Database'e kayıt edildi")
+
+#git deneme
