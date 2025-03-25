@@ -1,10 +1,13 @@
+import os
 import pandas as pd
 import numpy as np
 from NbaPlayerProps2 import get_nba_player_props
 from NbaPlayerStats2 import fetch_nba_stats, fetch_last_24h_nba_stats
 from AnalyzeNba import analyze_player_stats
 from insert_data_to_mssql import insert_data_to_mssql
+from dotenv import load_dotenv
 
+load_dotenv()
 
 # Pandas ayarları (Tüm satır ve sütunları göstermek için)
 pd.options.display.max_rows = None
@@ -12,7 +15,7 @@ pd.options.display.max_columns = None
 pd.set_option('display.width', None)  # Ekranda genişlik sınırlamasını kaldır
 
 # API Key'inizi buraya girin
-API_KEY = "7d1064b626d71e22138968960da1706f"
+API_KEY = os.getenv("API_KEY")
 
 # 1️⃣ Bahis oranlarını çek
 df_odds = get_nba_player_props(API_KEY)
