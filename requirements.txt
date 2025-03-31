@@ -12,3 +12,6 @@ requests==2.32.3
 six==1.17.0
 tzdata==2025.2
 urllib3==2.3.0
+SQLAlchemy~=2.0.40
+psycopg2-binary~=2.9.10
+supabase~=2.15.0
